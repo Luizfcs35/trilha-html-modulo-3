@@ -1,44 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-    <div>   
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
         <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
+          <img src="./assets/images/world.png" height="100" alt="Logo da página Worldpédia"/>
+          <h1>Worldpédia</h1>
+          <h4>A enciclopédia Mudial</h4>
         </div>
-    </div>
-
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
+        <div>
+          <label for="search"><span>🔍</span></label>
+          <input id="search" type="search" placeholder="search" />
         </div>
+      </header>
 
-        <div class="main">
+      <div class="bar"></div>
+
+      <section class="content">
+        <aside class="sidebar">
+          <h2>Conteúdo</h2>
+          <ul>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Links</a></li>
+          </ul>
+        </aside>
+        <section class="main">
+
+          <h1>The Last of Us (série de televisão)</h1>
+          <div class="hr"><hr /></div>
+          <figure>
+            <figure>
+                <img src="./assets/images/imgtlou.png" alt="Imagem da série The Last Of Us" width="500"/>
+            </figure>
+          </figure>
+          <h2>Sobre</h2>
+            <p>Os episódios da série The Last of Us compreende todos os episódios lançados pela HBO. A série, criada por Craig Mazin e Neil Druckmann, é baseada na franquia do jogo eletrônico. O enredo traz a história dos personagens Joel (Pedro Pascal) e Ellie (Bella Ramsey), a qual ambos viajam ao longo dos Estados Unidos em sentido ao hospital em Salt Lake City, em busca da milícia chamada Vaga-Lumes. Durante o trajeto a dupla enfrenta vários desafios, desde a Infectados pelo fungo Cordyceps a outros grupos de sobreviventes.
+                <blockquote>
+                    Nos Estados Unidos, a série estreou em 15 de janeiro de 2023.Em 27 de janeiro de 2023, após a exibição de apenas dois episódios, a HBO confirmou a renovação da série para a segunda temporada.
+                </blockquote>
+                
+            </p>
+          <h2>Sinopse</h2>
+          <p>
+            Em 26 setembro de 2003, um surto causado por um fungo conhecido como
+            cordyceps causa pânico nos Estados Unidos, transformando os
+            hospedeiros humanos em monstros canibalísticos conhecidos como
+            infectados. Em 2023, vinte anos depois da infecção, Joel, um dos
+            sobreviventes, é contratado para contrabandear uma garota chamada
+            Ellie para a base do grupo miliciano Vaga-Lumes para ser
+            desenvolvido uma cura, já que a jovem se descobre imune a doença. O
+            que começa como um pequeno trabalho se torna uma aventura perigosa e
+            emocionante, conforme eles atravessam o país e dependem um do outro
+            para sobreviver em meios a vários monstros e inimigos.
+          </p>
+          <h2>Principal</h2>
+
+          <p>
+            Pedro Pascal como Joel: um carpinteiro honesto que residia em
+            Austin, Texas, com sua filha Sarah, mas depois do surto da infecção
+            e a trágica morte de sua filha, se tornou um contrabandista frio,
+            violento e amargurado, que luta para sobreviver. Nos jogos
+            originais, Joel foi interpretado pelo ator Troy Baker. Bella Ramsey
+            como Ellie: uma garota orfã de quatorze anos que cresceu em uma zona
+            militar opressora em Boston, Massachusetts, e após sobreviver a
+            mordida de um infectado, acaba se tornando imune a contaminação.Nos
+            jogos originais, Ellie foi interpretada pela atriz Ashley Johnson.
+          </p>
+
+          <h2>Produção</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Temporada</th>
+                <th>Episódios</th>
+                <th>Série</th>
+                <th>Início</th>
+                <th>Fim</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>09</td>
+                    <td>The Last of Us</td>
+                    <td>15 de janeiro de 2023</td>
+                    <td>12 de março de 2023</td>
+                </tr>
+            </tbody>
+
             
-        </div>
+          </table>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
-    </div>
+          <h2>Notas</h2>
 
-    <div class="footer">
+          <h2>Referências</h2>
+        </section>
 
-    </div>
-</body>
+        <article class="anchors">
+          <h2>Neste Artigo</h2>
+          <figure>
+            <img
+              src="./assets/images/The_Last_of_Us_TV_logo.svg.png"
+              alt="The Last of Us"
+              width="100"
+            />
+            <caption></caption>
+          </figure>
+          <ul>
+            <li><a href="#">Âncoras</a></li>
+          </ul>
+        </article>
+      </section>
+      <div class="bar"></div>
+    </main>
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
 </html>
