@@ -1,38 +1,97 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 5em;
+  margin-right: 5em;
+  background-color: aliceblue;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+hr {
+  border-top: 1px solid lightgray;
+}
+ul {
+  list-style-type: none;
+  padding: 1em;
+  margin: 0;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+  background-color: white;
+  padding: 15px;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;
 }
-.content {
-    max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+header {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
-}
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
+.logo-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .sidebar {
-    border-right: solid 1px #cdcdcd;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
 }
-figure {
+
+.sidebar h4{
     text-align: center;
+    
+}
+.content {
+  max-width: 1440px;
+  margin: auto;
+  grid-gap: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: "sidebar main anchors";
+  grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+  background-color: white;
+}
+.content h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.logo-title {
+  float: right;
+  
+  padding: 1em;
+  margin: 1em;
+}
+.footer {
+  min-height: 100px;
+  border-top: solid 1px #cdcdcd;
+}
+.anchors {
+  border-left: solid 1px lightgrey;
+ 
+}
+.anchors > figure {
+    padding: 0;
+    margin: 0;
+}
+.anchors > figure img {
+  width: 200px;
+}
+
+.sidebar {
+  border-right: solid 1px lightgrey;
+}
+
+figure {
+  float: center;
 }
