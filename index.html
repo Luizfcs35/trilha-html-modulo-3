@@ -12,16 +12,18 @@
     <main>
       <header>
         <div class="logo-site">
-          <img src="./assets/images/world.png" height="100" alt="Logo da página Worldpédia"/>
-          <h3>Speedpédia</h3>
-          <span>A enciclopédia speed</span>
+          <img src="./assets/images/globe.png" height="75" alt="Logo da página Globepédia"/>
+          <div class="subtitle">
+            <h4>Globepédia</h4>
+          <h6>A enciclopédia Global</h6>
+          </div>
         </div>
         <div>
           <label for="search"><span>🔍</span></label>
           <input id="search" type="search" placeholder="search" />
         </div>
       </header>
-      <div class="bar"></div>
+     
       <section class="content">
         
         <aside class="sidebar">
@@ -30,21 +32,21 @@
           <ul>
             <li><a href="#">Início</a></li>
             <li><a href="#">Sinopse</a></li>
-            <li><a href="#">Temporada</a></li>
+            <li><a href="#temporada">Temporada</a></li>
             <details>
               <summary><a href="#">Elenco e Personagens</a></summary>
-              <li><a href="#">Principal</a></li>
+              <li><a href="#principal">Principal</a></li>
               <li><a href="#">Recorrentes</a></li>
-              <li><a href="#">Participações especiais</a></li>
+              <li><a href="#participações">Participações especiais</a></li>
             </details>
               <details>
                 <summary><a href="#">Produção</a></summary>
                 <li><a href="#">Antendentes</a></li>
-                <li><a href="#">Elenco</a></li>
-                <li><a href="#">Escrita</a></li>
-                <li><a href="#">Filmagens</a></li>
-                <li><a href="#">Música</a></li>
-                <li><a href="#">Efeitos Visuais</a></li>
+                <li><a href="#elenco">Elenco</a></li>
+                <li><a href="#escrita">Escrita</a></li>
+                <li><a href="#filmagem">Filmagens</a></li>
+                <li><a href="#musica">Música</a></li>
+                <li><a href="#efeitos">Efeitos Visuais</a></li>
               </details>
              
             <li><a href="https://pt.wikipedia.org/wiki/The_Last_of_Us_(franquia)" target="_blank">Ligações externas</a></li>
@@ -53,10 +55,18 @@
         <section class="main">
           <h1><i>The Last Of Us (série de televisão)</i></h1>
           <time><em>11 de Março de 2023</em></time>
-          <div class="bar"></div>
-          <h2>Sobre</h2>
-          <hr>
-          <figure class="logo-title">
+          <div class="bar">
+            <div class="left-bar">
+              <a href="">Artigo</a>
+            <a href="">Discussão</a>
+            </div>
+            <div class="right-bar">
+              <a href="">Ler</a>
+              <a href="">Editar</a>
+              <a href="">Ver histórico</a>
+            </div>
+          </div>          
+          <figure class="card-title">
             <img
               src="./assets/images/The_Last_of_Us_TV_logo.svg.png"
               alt="The Last of Us"
@@ -66,64 +76,83 @@
           </figure>
             <p>Os episódios da série The Last of Us compreende todos os episódios lançados pela HBO. A série, criada por Craig Mazin e Neil Druckmann, é baseada na franquia do jogo eletrônico. O enredo traz a história dos personagens Joel (Pedro Pascal) e Ellie (Bella Ramsey), a qual ambos viajam ao longo dos Estados Unidos em sentido ao hospital em Salt Lake City, em busca da milícia chamada Vaga-Lumes. Durante o trajeto a dupla enfrenta vários desafios, desde a Infectados pelo fungo Cordyceps a outros grupos de sobreviventes.
                 <blockquote>
-                    Nos Estados Unidos, a série estreou em 15 de janeiro de 2023.Em 27 de janeiro de 2023, após a exibição de apenas dois episódios, a HBO confirmou a renovação da série para a segunda temporada.
+                   <em> Nos Estados Unidos, a série estreou em 15 de janeiro de 2023.Em 27 de janeiro de 2023, após a exibição de apenas dois episódios, a HBO confirmou a renovação da série para a segunda temporada.</em>
                 </blockquote>
                 
                 
             </p>
-          <h2>Sinopse</h2>
-          <hr>
-          <p>
-            Em 26 setembro de 2003, um surto causado por um fungo conhecido como
-            cordyceps causa pânico nos Estados Unidos, transformando os
-            hospedeiros humanos em monstros canibalísticos conhecidos como
-            infectados. Em 2023, vinte anos depois da infecção, Joel, um dos
-            sobreviventes, é contratado para contrabandear uma garota chamada
-            Ellie para a base do grupo miliciano Vaga-Lumes para ser
-            desenvolvido uma cura, já que a jovem se descobre imune a doença. O
-            que começa como um pequeno trabalho se torna uma aventura perigosa e
-            emocionante, conforme eles atravessam o país e dependem um do outro
-            para sobreviver em meios a vários monstros e inimigos.
-          </p>
-          <h2>Principal</h2>
-          <hr>
-          <p>
-            Pedro Pascal como Joel: um carpinteiro honesto que residia em
-            Austin, Texas, com sua filha Sarah, mas depois do surto da infecção
-            e a trágica morte de sua filha, se tornou um contrabandista frio,
-            violento e amargurado, que luta para sobreviver. Nos jogos
-            originais, Joel foi interpretado pelo ator Troy Baker. Bella Ramsey
-            como Ellie: uma garota orfã de quatorze anos que cresceu em uma zona
-            militar opressora em Boston, Massachusetts, e após sobreviver a
-            mordida de um infectado, acaba se tornando imune a contaminação.Nos
-            jogos originais, Ellie foi interpretada pela atriz Ashley Johnson.
-          </p>
-
-          <h2>Produção</h2>
-          <hr>
-          <table >
-            <thead>
-              <tr>
-                <th>Temporada</th>
-                <th>Episódios</th>
-                <th>Série</th>
-                <th>Início</th>
-                <th>Fim</th>
-              </tr>
-            </thead>
-            <tbody>
+          <section id="sinopse">
+            <h2>Sinopse</h2>
+            <hr>
+            <figure class="card-fungo">
+              <img
+                src="./assets/images/cordyceps.png"
+                alt="Cordyceps"
+                width="100"
+              />
+              <figcaption><em>A franquia explora o conceito de uma infecção humana causada pelo fungo cordyceps, que infecta principalmente insetos tomando controle de suas funções motoras e forçando-os a cultivar o fungo.</em></figcaption>
+            </figure>
+            <p >
+              Em 26 setembro de 2003, um surto causado por um fungo conhecido como
+              <a class="cordyceps" href="#">cordyceps</a> causa pânico nos Estados Unidos, transformando os
+              hospedeiros humanos em monstros canibalísticos conhecidos como
+              infectados. Em 2023, vinte anos depois da infecção, Joel, um dos
+              sobreviventes, é contratado para contrabandear uma garota chamada
+              Ellie para a base do grupo miliciano Vaga-Lumes para ser
+              desenvolvido uma cura, já que a jovem se descobre imune a doença. O
+              que começa como um pequeno trabalho se torna uma aventura perigosa e
+              emocionante, conforme eles atravessam o país e dependem um do outro
+              para sobreviver em meios a vários monstros e inimigos.
+            </p>
+          </section>
+          <section id="principal">
+            <h2>Principal</h2>
+            <hr>
+            <p>
+              Pedro Pascal como Joel: um carpinteiro honesto que residia em
+              Austin, Texas, com sua filha Sarah, mas depois do surto da infecção
+              e a trágica morte de sua filha, se tornou um contrabandista frio,
+              violento e amargurado, que luta para sobreviver. Nos jogos
+              originais, Joel foi interpretado pelo ator Troy Baker. Bella Ramsey
+              como Ellie: uma garota orfã de quatorze anos que cresceu em uma zona
+              militar opressora em Boston, Massachusetts, e após sobreviver a
+              mordida de um infectado, acaba se tornando imune a contaminação.Nos
+              jogos originais, Ellie foi interpretada pela atriz Ashley Johnson.
+            </p>
+  
+            <h2 id="produção">Produção</h2>
+            <hr>
+            <table class="temporada">
+              <thead>
                 <tr>
-                    <td>01</td>
-                    <td>09</td>
-                    <td>The Last of Us</td>
-                    <td>15 de janeiro de 2023</td>
-                    <td>12 de março de 2023</td>
+                  <th>Temporada</th>
+                  <th>Episódios</th>
+                  <th>Série</th>
+                  <th>Início</th>
+                  <th>Fim</th>
                 </tr>
-            </tbody>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>01</td>
+                      <td>09</td>
+                      <td>The Last of Us</td>
+                      <td>15 de janeiro de 2023</td>
+                      <td>12 de março de 2023</td>
+                  </tr>
+              </tbody>
+            </table>
+          </section>
 
-            
-          </table>
-
+          <h2>Escrita</h2>
+          <hr>
+          <p id="escrita">
+          Asérie de drama e ficção pós-apocalíptica foi escrita por Mazin e Druckmann. Druckmann estava convencido de que Mazin era o parceiro criativo ideal para a série após testemunhar sua paixão pela história do jogo. Inclusive, referenciando ele como um como o "cocriador" da história. Mazin afirmou que a série pode representar uma mudança de paradigma de adaptações de videogames ao cinema e televisão devido à força de sua narrativa, observando que "levaria apenas 20 minutos no Google para os executivos da HBO perceberem que The Last of Us é o Lawrence da Arábia de narrativas de videogame"
+          </p>
+          <h2>Músicas</h2>
+          <hr>
+          <p id="musica">Gustavo Santaolalla e David Fleming compuseram a trilha sonora da série de televisão, o primeiro compôs o tema de abertura. Ele disse que os espectadores latinos "reconhecerão os toques" de sua música, e valeu-se de sua experiência prévia no cinema e na televisão, por suas composições de temas e algumas faixas para Jane the Virgin (2014–2019) e Making a Murderer (2015–2018)</p>
+          <hr>
           <h2>Notas</h2>
           <hr>
           <h2>Referências</h2>
@@ -131,7 +160,7 @@
         </section>
 
         <article class="anchors">
-          <h2>Neste Artigo</h2>
+          <h4>Conteúdo <a href="">Ferramentas</a></h4>
           <hr>
           <figure class="logo-serie">
             <img src="./assets/images/imgtlou.png" alt="Imagem da série The Last Of Us"/>
@@ -139,14 +168,24 @@
           </figure>
           <hr>
           <ul>
-            <li><a href="#">Âncoras</a></li>
+            <li><a href="#">Páginas afluentes</a></li>
           </ul>
         </article>
       </section>
       <div class="bar"></div>
     </main>
     <footer>
-      <div class="footer"></div>
+      <div class="footer-nav">
+        <p>Este texto é disponibilizado nos termos da licença; pode estar sujeito a condições adicionais. Para mais detalhes, consulte as condições de utilização.</p>
+
+        <a href="">Política de privacidade</a>
+        <a href="">Sobre a Wikipédia</a>
+        <a href="">Avisos gerais</a>
+        <a href="">Versão móvel</a>
+        <a href="">Programadores</a>
+        <a href="">Estatísticas</a>
+        <a href="">Declaração sobre ''cookies''</a>        
+      </div>
     </footer>
   </body>
 </html>
