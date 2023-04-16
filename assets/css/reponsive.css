@@ -1,0 +1,222 @@
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0 auto;
+    padding: 0 0.5em;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: aliceblue;
+    color: #444;
+  }
+  hr {
+    border-top: 1px solid lightgrey;
+  }
+  ul {
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+  }
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    padding: 0 2px;
+  }
+  p {
+    text-align: justify;
+  }
+  blockquote {
+    border-left: 2px solid lightblue;
+    padding: 0 1em;
+    text-align: justify;
+    margin-left: 1em;
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+  }
+
+  .bar {
+    display: flex;
+    align-items: baseline;
+    background-color: white;
+    padding: 5px 0;
+    border-bottom: solid 1px lightgrey;
+  }
+  .bar a {
+    padding: 0 5px;
+  }
+
+  .content {
+    display: grid;
+    margin: 0 auto;
+    grid-column-gap: 0.5em;
+    gap: 0.5em;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: 35vw;
+    
+    background-color: white;
+  }
+  .main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+  }
+  .main h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .main time {
+    font-size: 0.7rem;
+    justify-content: end;
+    margin: 0;
+  }
+  header {
+    display: flex;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .logo-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 10em;
+  }
+
+  .logo-page img {
+    transform: scaleX(-1);
+    width: 35px;
+    height: 35px;
+  }
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subtitle h4 {
+    font-size: 0.7em;
+  }
+
+  .subtitle h6 {
+    font-size: 0.5em;
+  }
+
+  .search-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1em;
+  }
+  .search-header span {
+    padding: 0;
+    margin: 0;
+    color: lightslategray;
+  }
+  .search-header input {
+    width: 10em;
+    border: 1.8px solid lightslategrey;
+    border-radius: 3px;
+  }
+
+  .sidebar {
+    grid-column-start: 1;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+    border-right: solid 1px lightgrey;
+  }
+  .sidebar li,
+  details {
+    padding: 0.5em 0;
+  }
+  .sidebar h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .anchors {
+    position: absolute;
+    min-height: 50vh;
+    top: 30em;
+    margin: 0 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+    border: solid 1px lightgrey;
+  }
+
+  .anchors li  {
+    justify-content: flex-start;
+    padding: 0.5em 0;
+  }
+  .anchors h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+  .anchors > figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .anchors img {
+    width: 150px;
+  }
+
+  .card-fungo {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+  }
+  #sinopse:hover .card-fungo {
+    display: block;
+    transition: ease-in-out 0.5s;
+  }
+
+  .card-fungo img {
+    height: 10em;
+    justify-content: center;
+  }
+
+  .card-fungo figcaption {
+    text-align: justify;
+    font-size: 0.8em;
+  }
+
+  /*--------tabela-------*/
+  .producao { 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .temporada {
+    display: none;
+    border-collapse: separate;
+    box-sizing:border-box;
+    text-indent: 0;
+    border-spacing: 0;
+    border-color: gray;
+  } 
+  
+  .temporada th, td {
+    padding: 0.5em;
+    align-items: center;
+    background-color: gray;
+    
+  }
+ 
+}

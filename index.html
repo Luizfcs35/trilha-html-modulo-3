@@ -4,34 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Página Principal</title>
+    <title>Globepédia</title>
+    <link rel="icon" type="image/x-icon"  href="./assets/images/travel-worlds.png">
+    <!---------------CSS----------->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reponsive.css"/>
+    <!--Link fonts e icons Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <main>
-      <header>
-        <div class="logo-site">
-          <img src="./assets/images/globe.png" height="75" alt="Logo da página Globepédia"/>
-          <div class="subtitle">
-            <h4>Globepédia</h4>
-          <h6>A enciclopédia Global</h6>
-          </div>
+    <header>
+      <div class="logo-page">
+        <img src="./assets/images/globe.png" height="75" alt="Logo da páginaGlobepédia"/>
+        <div class="subtitle">
+          <h4>Globepédia</h4>
+        <h6>A enciclopédia Global</h6>
         </div>
-        <div>
-          <label for="search"><span>🔍</span></label>
-          <input id="search" type="search" placeholder="search" />
-        </div>
-      </header>
-     
-      <section class="content">
-        
-        <aside class="sidebar">
+      </div>
+      <div class="search-header">
+        <label for="search"><span class="material-symbols-outlined">
+          search
+          </span></label>
+        <input id="search" type="search" placeholder=" Pesquisa na Globepédia" />
+      </div>
+    </header>
+
+    <main class="content">
+      <aside class="sidebar">
           <h4>Conteúdo <a href="">[ocultar]</a></h4>
           <hr>
           <ul>
             <li><a href="#">Início</a></li>
-            <li><a href="#">Sinopse</a></li>
+            <li><a href="#sinopse">Sinopse</a></li>
             <li><a href="#temporada">Temporada</a></li>
             <details>
               <summary><a href="#">Elenco e Personagens</a></summary>
@@ -40,7 +44,7 @@
               <li><a href="#participações">Participações especiais</a></li>
             </details>
               <details>
-                <summary><a href="#">Produção</a></summary>
+                <summary><a href="#producao">Produção</a></summary>
                 <li><a href="#">Antendentes</a></li>
                 <li><a href="#elenco">Elenco</a></li>
                 <li><a href="#escrita">Escrita</a></li>
@@ -51,8 +55,9 @@
              
             <li><a href="https://pt.wikipedia.org/wiki/The_Last_of_Us_(franquia)" target="_blank">Ligações externas</a></li>
           </ul>
-        </aside>
-        <section class="main">
+      </aside>
+
+      <section class="main">
           <h1><i>The Last Of Us (série de televisão)</i></h1>
           <time><em>11 de Março de 2023</em></time>
           <div class="bar">
@@ -63,7 +68,7 @@
             <div class="right-bar">
               <a href="">Ler</a>
               <a href="">Editar</a>
-              <a href="">Ver histórico</a>
+              <a href="">Histórico</a>
             </div>
           </div>          
           <figure class="card-title">
@@ -74,13 +79,12 @@
             />
             <figcaption><em>Logo The Last Of Us</em></figcaption>
           </figure>
-            <p>Os episódios da série The Last of Us compreende todos os episódios lançados pela HBO. A série, criada por Craig Mazin e Neil Druckmann, é baseada na franquia do jogo eletrônico. O enredo traz a história dos personagens Joel (Pedro Pascal) e Ellie (Bella Ramsey), a qual ambos viajam ao longo dos Estados Unidos em sentido ao hospital em Salt Lake City, em busca da milícia chamada Vaga-Lumes. Durante o trajeto a dupla enfrenta vários desafios, desde a Infectados pelo fungo Cordyceps a outros grupos de sobreviventes.
+
+          <p>Os episódios da série The Last of Us compreende todos os episódios lançados pela HBO. A série, criada por Craig Mazin e Neil Druckmann, é baseada na franquia do jogo eletrônico. O enredo traz a história dos personagens <a href="#elenco">Joel (Pedro Pascal)</a> e <a href="#elenco">Ellie (Bella Ramsey)</a>, a qual ambos viajam ao longo dos Estados Unidos em sentido ao hospital em Salt Lake City, em busca da milícia chamada Vaga-Lumes. Durante o trajeto a dupla enfrenta vários desafios, desde a Infectados pelo   fungo Cordyceps a outros grupos de sobreviventes.
                 <blockquote>
                    <em> Nos Estados Unidos, a série estreou em 15 de janeiro de 2023.Em 27 de janeiro de 2023, após a exibição de apenas dois episódios, a HBO confirmou a renovação da série para a segunda temporada.</em>
-                </blockquote>
-                
-                
-            </p>
+                </blockquote>  
+          </p>
           <section id="sinopse">
             <h2>Sinopse</h2>
             <hr>
@@ -94,7 +98,7 @@
             </figure>
             <p >
               Em 26 setembro de 2003, um surto causado por um fungo conhecido como
-              <a class="cordyceps" href="#">cordyceps</a> causa pânico nos Estados Unidos, transformando os
+              <a class="cordyceps" href="#sinopse">cordyceps</a> causa pânico nos Estados Unidos, transformando os
               hospedeiros humanos em monstros canibalísticos conhecidos como
               infectados. Em 2023, vinte anos depois da infecção, Joel, um dos
               sobreviventes, é contratado para contrabandear uma garota chamada
@@ -120,47 +124,57 @@
               jogos originais, Ellie foi interpretada pela atriz Ashley Johnson.
             </p>
   
-            <h2 id="produção">Produção</h2>
-            <hr>
-            <table class="temporada">
-              <thead>
-                <tr>
-                  <th>Temporada</th>
-                  <th>Episódios</th>
-                  <th>Série</th>
-                  <th>Início</th>
-                  <th>Fim</th>
-                </tr>
-              </thead>
-              <tbody>
+            <section id="producao">
+              <h2>Produção</h2>
+              <hr>
+              <caption>HBO - Série</caption>
+              <table class="temporada">
+                <thead>
                   <tr>
-                      <td>01</td>
-                      <td>09</td>
-                      <td>The Last of Us</td>
-                      <td>15 de janeiro de 2023</td>
-                      <td>12 de março de 2023</td>
+                    <th>Temporada</th>
+                    <th>Episódios</th>
+                    <th>Série</th>
+                    <th>Início</th>
+                    <th>Fim</th>
                   </tr>
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>09</td>
+                        <td>The Last of Us</td>
+                        <td>15 de janeiro de 2023</td>
+                        <td>12 de março de 2023</td>
+                    </tr>
+                </tbody>
+              </table>
+            </section>
           </section>
 
-          <h2>Escrita</h2>
-          <hr>
-          <p id="escrita">
-          Asérie de drama e ficção pós-apocalíptica foi escrita por Mazin e Druckmann. Druckmann estava convencido de que Mazin era o parceiro criativo ideal para a série após testemunhar sua paixão pela história do jogo. Inclusive, referenciando ele como um como o "cocriador" da história. Mazin afirmou que a série pode representar uma mudança de paradigma de adaptações de videogames ao cinema e televisão devido à força de sua narrativa, observando que "levaria apenas 20 minutos no Google para os executivos da HBO perceberem que The Last of Us é o Lawrence da Arábia de narrativas de videogame"
+          <section id="escrita">
+            <h2>Escrita</h2>
+            <hr>
+            <p>
+            A série de drama e ficção pós-apocalíptica foi escrita por Mazin e  Druckmann. Druckmann estava convencido de que Mazin era o parceiro   criativo ideal para a série após testemunhar sua paixão pela história   do jogo. Inclusive, referenciando ele como um como o "cocriador" da   história. Mazin afirmou que a série pode representar uma mudança de   paradigma de adaptações de videogames ao cinema e televisão devido à  força de sua narrativa, observando que "levaria apenas 20 minutos no   Google para os executivos da HBO perceberem que The Last of Us é o  Lawrence da Arábia de narrativas de videogame"
           </p>
-          <h2>Músicas</h2>
+          </section>
+          <section id="musica">
+            <h2>Músicas</h2>
+            <hr>
+            <p id="musica">Gustavo Santaolalla e David Fleming compuseram a   trilha sonora da série de televisão, o primeiro compôs o tema de  abertura. Ele disse que os espectadores latinos "reconhecerão os   toques" de sua música, e valeu-se de sua experiência prévia no cinema   e na televisão, por suas composições de temas e algumas faixas para   Jane the Virgin (2014–2019) e Making a Murderer (2015–2018)</p>
           <hr>
-          <p id="musica">Gustavo Santaolalla e David Fleming compuseram a trilha sonora da série de televisão, o primeiro compôs o tema de abertura. Ele disse que os espectadores latinos "reconhecerão os toques" de sua música, e valeu-se de sua experiência prévia no cinema e na televisão, por suas composições de temas e algumas faixas para Jane the Virgin (2014–2019) e Making a Murderer (2015–2018)</p>
-          <hr>
-          <h2>Notas</h2>
-          <hr>
+          </section>
+          <section id="notas">
+            <h2>Notas</h2>
+            <hr>
+          </section>
+          
           <h2>Referências</h2>
           <hr>
-        </section>
+      </section>
 
-        <article class="anchors">
-          <h4>Conteúdo <a href="">Ferramentas</a></h4>
+      <article class="anchors">
+          <h4>Ferramentas<a href="">[ocultar]</a></h4>
           <hr>
           <figure class="logo-serie">
             <img src="./assets/images/imgtlou.png" alt="Imagem da série The Last Of Us"/>
@@ -169,14 +183,18 @@
           <hr>
           <ul>
             <li><a href="#">Páginas afluentes</a></li>
+            <li><a href="#">Páginas afluentes</a></li>
+            <li><a href="#">Páginas afluentes</a></li>
+            <li><a href="#">Páginas afluentes</a></li>
+            <li><a href="#">Páginas afluentes</a></li>
           </ul>
-        </article>
-      </section>
-      <div class="bar"></div>
+      </article>
     </main>
     <footer>
-      <div class="footer-nav">
-        <p>Este texto é disponibilizado nos termos da licença; pode estar sujeito a condições adicionais. Para mais detalhes, consulte as condições de utilização.</p>
+      <nav class="footer-nav">
+        <div class="text">
+          <p>Este texto é disponibilizado nos termos da licença; pode estar sujeito a condições adicionais. Para mais detalhes, consulte as condições de utilização.</p>
+        </div>
 
         <a href="">Política de privacidade</a>
         <a href="">Sobre a Wikipédia</a>
@@ -185,7 +203,14 @@
         <a href="">Programadores</a>
         <a href="">Estatísticas</a>
         <a href="">Declaração sobre ''cookies''</a>        
-      </div>
+      </nav>
+
+      <div class="logo-page">
+        <img src="./assets/images/globe.png" height="75" alt="Logo da páginaGlobepédia"/>
+        <div class="subtitle">
+          <h4>Globepédia</h4>
+        <h6>A enciclopédia Global</h6>
+        </div>
     </footer>
   </body>
 </html>
