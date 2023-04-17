@@ -1,29 +1,28 @@
 @media screen and (max-width: 480px) {
   body {
-    margin: 0 auto;
-    padding: 0 0.5em;
+    margin: 0;
+    padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: #333;
     background-color: aliceblue;
-    color: #444;
-  }
-  hr {
-    border-top: 1px solid lightgrey;
   }
   ul {
     list-style-type: none;
-    padding: 1em;
+    padding: 0;
     margin: 0;
   }
   a {
-    color: blue;
+    color: #232395;
     text-decoration: none;
+    padding: 0 5px;
   }
   a:hover {
     text-decoration: underline;
-    padding: 0 2px;
   }
+
   p {
     text-align: justify;
+    padding: 0 0.5em;
   }
   blockquote {
     border-left: 2px solid lightblue;
@@ -31,39 +30,108 @@
     text-align: justify;
     margin-left: 1em;
   }
-  figure {
+
+  /*---------Cabeçalho-------*/
+  header {
+    display: flex;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    border-bottom: 1px solid #b6b6b6;
+  }
+
+  .logo-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo-page img {
+    transform: scaleX(-1);
+    padding: 0.5em;
+    width: 35px;
+    height: 35px;
+  }
+  .subtitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 0.5em;
+    padding: 0;
+    margin: 5px;
+  }
+  .subtitle h4 {
+    font-size: 0.7em;
+    margin: 0 0.5em;
   }
 
-  .bar {
+  .subtitle h6 {
+    font-size: 0.5em;
+    margin: 0.5em 0;
+  }
+
+  .search-header {
     display: flex;
-    align-items: baseline;
-    background-color: white;
-    padding: 5px 0;
-    border-bottom: solid 1px lightgrey;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5em;
+  }
+  .search-header span {
+    padding: 0;
+    margin: 0;
+    color: lightslategray;
+  }
+  .search-header input {
+    width: 100%;
+    border: 1.8px solid lightslategrey;
+    border-radius: 2px;
+  }
+  .bar span {
+    display: inline-flex;
+    font-size: 2em;
+    margin: 0 auto;
+    color: #333;
+    padding: 0 auto;
+    border: none;
+  }
+  /*---------------Navegador do conteudo--------*/
+  .bar {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    width: 3em;
+  }
+  .dropdown-content {
+    background-color: aliceblue;
+    display: block;
+    position: absolute;
+    top: -0.5em;
+    box-shadow: -7px 7px 4px #9e9e9e, 7px -7px 4px #ffffff;
+    transition: ease-in-out 0.5s;
   }
   .bar a {
-    padding: 0 5px;
+    display: none;
+    color: #333;
+    padding: 0.5em;
+    z-index: 1;
   }
 
+  .bar:hover a {
+    display: block;
+  }
+  /*---------Conteudo---------*/
   .content {
-    display: grid;
+    box-sizing: border-box;
     margin: 0 auto;
-    grid-column-gap: 0.5em;
-    gap: 0.5em;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: 35vw;
-    
-    background-color: white;
+    padding: 0 0.5em;
   }
   .main {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    float: right;
+    background-color: white;
+    border-left: 0.1em solid #b6b6b6;
   }
   .main h1 {
     font-size: 1rem;
@@ -75,87 +143,45 @@
     font-size: 0.7rem;
     justify-content: end;
     margin: 0;
+    border-bottom: solid 1px #555;
   }
-  header {
-    display: flex;
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    border-bottom: 1px solid lightgrey;
-  }
-
-  .logo-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 10em;
-  }
-
-  .logo-page img {
-    transform: scaleX(-1);
-    width: 35px;
-    height: 35px;
-  }
-  .subtitle {
+  /*-------------menu lateral esquerdo----------*/
+  .sidebar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .subtitle h4 {
-    font-size: 0.7em;
-  }
-
-  .subtitle h6 {
-    font-size: 0.5em;
-  }
-
-  .search-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1em;
-  }
-  .search-header span {
+    width: 25%;
+    float: left;
     padding: 0;
-    margin: 0;
-    color: lightslategray;
-  }
-  .search-header input {
-    width: 10em;
-    border: 1.8px solid lightslategrey;
-    border-radius: 3px;
-  }
-
-  .sidebar {
-    grid-column-start: 1;
-    font-size: 0.8em;
-    padding: 0;
-    margin: 0;
-    border-right: solid 1px lightgrey;
+    margin: 0 auto;
+    background-color: aliceblue;
+    color: #333;
   }
   .sidebar li,
   details {
-    padding: 0.5em 0;
+    padding: 0.5em;
   }
-  .sidebar h4 {
-    text-align: center;
-    font-size: 1em;
+  summary {
+    list-style-type: "🔗";
   }
 
+  details[open] summary {
+    list-style-type: "❌";
+  }
+
+  /*-------Ancora esquerda-------*/
   .anchors {
     position: absolute;
-    min-height: 50vh;
-    top: 30em;
-    margin: 0 0.5em;
+    top: 45em;
+    left: 0;
+    margin: 0 1em;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 0.8em;
-    border: solid 1px lightgrey;
   }
 
-  .anchors li  {
+  .anchors li {
     justify-content: flex-start;
     padding: 0.5em 0;
   }
@@ -163,31 +189,34 @@
     text-align: center;
     font-size: 1em;
   }
-  .anchors > figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+  .logo-serie {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    text-align: center;
+    z-index: 1;
+  }
+  .anchors:hover .logo-serie {
+    display: block;
   }
   .anchors img {
-    width: 150px;
+    width: 140px;
+    height: auto;
   }
 
   .card-fungo {
-    display: none;
+    position: relative;
     align-items: center;
     justify-content: center;
     margin: 1em;
+    transition: ease-in-out 0.5s;
   }
   #sinopse:hover .card-fungo {
     display: block;
-    transition: ease-in-out 0.5s;
   }
 
   .card-fungo img {
     height: 10em;
-    justify-content: center;
   }
 
   .card-fungo figcaption {
@@ -196,27 +225,630 @@
   }
 
   /*--------tabela-------*/
-  .producao { 
-    display: none;
+  .producao {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    font-size: 1em;
   }
   .temporada {
-    display: none;
+    display: table;
+    width: 300px;
+    font-size: 0.5rem;
+    margin: 0 auto;
     border-collapse: separate;
-    box-sizing:border-box;
-    text-indent: 0;
-    border-spacing: 0;
     border-color: gray;
-  } 
-  
-  .temporada th, td {
-    padding: 0.5em;
-    align-items: center;
-    background-color: gray;
-    
   }
- 
+
+  .temporada th {
+    align-items: center;
+    background-color: grey;
+    padding: 10px 0;
+  }
+  .temporada td {
+    background-color: lightgray;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    background-color: aliceblue;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    margin: 0 auto;
+    border-top: 0.1em solid #b6b6b6;
+  }
+  .text p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .footer-nav a {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: #333;
+    background-color: aliceblue;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: #232395;
+    text-decoration: none;
+    padding: 0 5px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: justify;
+    padding: 0 0.5em;
+  }
+  blockquote {
+    border-left: 2px solid lightblue;
+    padding: 0 1em;
+    text-align: justify;
+    margin-left: 1em;
+  }
+
+  /*---------Cabeçalho-------*/
+  header {
+    display: flex;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    border-bottom: 1px solid #b6b6b6;
+  }
+
+  .logo-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo-page img {
+    transform: scaleX(-1);
+    padding: 0.5em;
+    width: 35px;
+    height: 35px;
+  }
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
+  }
+  .subtitle h4 {
+    font-size: 0.7em;
+    margin: 0 0.5em;
+  }
+
+  .subtitle h6 {
+    font-size: 0.5em;
+    margin: 0.5em 0;
+  }
+
+  .search-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5em;
+  }
+  .search-header span {
+    padding: 0;
+    margin: 0;
+    color: lightslategray;
+  }
+  .search-header input {
+    width: 100%;
+    border: 1.8px solid lightslategrey;
+    border-radius: 2px;
+  }
+  .bar span {
+    display: inline-flex;
+    font-size: 2em;
+    margin: 0 auto;
+    color: #333;
+    padding: 0 auto;
+    border: none;
+  }
+  /*---------------Navegador do conteudo--------*/
+  .bar {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    width: 3em;
+  }
+  .dropdown-content {
+    background-color: aliceblue;
+    display: block;
+    position: absolute;
+    top: -0.5em;
+    box-shadow: -7px 7px 4px #9e9e9e, 7px -7px 4px #ffffff;
+    transition: ease-in-out 0.5s;
+  }
+  .bar a {
+    display: none;
+    color: #333;
+    padding: 0.5em;
+    z-index: 1;
+  }
+
+  .bar:hover a {
+    display: block;
+  }
+  /*---------Conteudo---------*/
+  .content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 0.5em;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    float: right;
+    background-color: white;
+    border-left: 0.1em solid #b6b6b6;
+  }
+  .main h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .main time {
+    font-size: 0.7rem;
+    justify-content: end;
+    margin: 0;
+    border-bottom: solid 1px #555;
+  }
+  /*-------------menu lateral esquerdo----------*/
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    float: left;
+    padding: 0;
+    margin: 0 auto;
+    background-color: aliceblue;
+    color: #333;
+  }
+  .sidebar li,
+  details {
+    padding: 0.5em;
+  }
+  summary {
+    list-style-type: "🔗";
+  }
+
+  details[open] summary {
+    list-style-type: "❌";
+  }
+
+  /*-------Ancora esquerda-------*/
+  .anchors {
+    position: absolute;
+    top: 45em;
+    left: 0;
+    margin: 0 1em;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+  }
+
+  .anchors li {
+    justify-content: flex-start;
+    padding: 0.5em 0;
+  }
+  .anchors h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+  .logo-serie {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    text-align: center;
+    z-index: 1;
+  }
+  .anchors:hover .logo-serie {
+    display: block;
+  }
+  .anchors img {
+    width: 140px;
+    height: auto;
+  }
+
+  .card-fungo {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    transition: ease-in-out 0.5s;
+  }
+  #sinopse:hover .card-fungo {
+    display: block;
+  }
+
+  .card-fungo img {
+    height: 10em;
+  }
+
+  .card-fungo figcaption {
+    text-align: justify;
+    font-size: 0.8em;
+  }
+
+  /*--------tabela-------*/
+  .producao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+  .temporada {
+    display: table;
+    width: 300px;
+    font-size: 0.5rem;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-color: gray;
+  }
+
+  .temporada th {
+    align-items: center;
+    background-color: grey;
+    padding: 10px 0;
+  }
+  .temporada td {
+    background-color: lightgray;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    background-color: aliceblue;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    margin: 0 auto;
+    border-top: 0.1em solid #b6b6b6;
+  }
+  .text p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .footer-nav a {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: #333;
+    background-color: aliceblue;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: #232395;
+    text-decoration: none;
+    padding: 0 5px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: justify;
+    padding: 0 0.5em;
+  }
+  blockquote {
+    border-left: 2px solid lightblue;
+    padding: 0 1em;
+    text-align: justify;
+    margin-left: 1em;
+  }
+
+  /*---------Cabeçalho-------*/
+  header {
+    display: flex;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    border-bottom: 1px solid #b6b6b6;
+  }
+
+  .logo-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo-page img {
+    transform: scaleX(-1);
+    padding: 0.5em;
+    width: 35px;
+    height: 35px;
+  }
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
+  }
+  .subtitle h4 {
+    font-size: 0.7em;
+    margin: 0 0.5em;
+  }
+
+  .subtitle h6 {
+    font-size: 0.5em;
+    margin: 0.5em 0;
+  }
+
+  .search-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5em;
+  }
+  .search-header span {
+    padding: 0;
+    margin: 0;
+    color: lightslategray;
+  }
+  .search-header input {
+    width: 100%;
+    border: 1.8px solid lightslategrey;
+    border-radius: 2px;
+  }
+  .bar span {
+    display: inline-flex;
+    font-size: 2em;
+    margin: 0 auto;
+    color: #333;
+    padding: 0 auto;
+    border: none;
+  }
+  /*---------------Navegador do conteudo--------*/
+  .bar {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    width: 3em;
+  }
+  .dropdown-content {
+    background-color: aliceblue;
+    display: block;
+    position: absolute;
+    top: -0.5em;
+    box-shadow: -7px 7px 4px #9e9e9e, 7px -7px 4px #ffffff;
+    transition: ease-in-out 0.5s;
+  }
+  .bar a {
+    display: none;
+    color: #333;
+    padding: 0.5em;
+    z-index: 1;
+  }
+
+  .bar:hover a {
+    display: block;
+  }
+  /*---------Conteudo---------*/
+  .content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 0.5em;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    float: right;
+    background-color: white;
+    border-left: 0.1em solid #b6b6b6;
+  }
+  .main h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .main time {
+    font-size: 0.7rem;
+    justify-content: end;
+    margin: 0;
+    border-bottom: solid 1px #555;
+  }
+  /*-------------menu lateral esquerdo----------*/
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    float: left;
+    padding: 0;
+    margin: 0 auto;
+    background-color: aliceblue;
+    color: #333;
+  }
+  .sidebar li,
+  details {
+    padding: 0.5em;
+  }
+  summary {
+    list-style-type: "🔗";
+  }
+
+  details[open] summary {
+    list-style-type: "❌";
+  }
+
+  /*-------Ancora esquerda-------*/
+  .anchors {
+    position: absolute;
+    top: 45em;
+    left: 0;
+    margin: 0 1em;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+  }
+
+  .anchors li {
+    justify-content: flex-start;
+    padding: 0.5em 0;
+  }
+  .anchors h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+  .logo-serie {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    text-align: center;
+    z-index: 1;
+  }
+  .anchors:hover .logo-serie {
+    display: block;
+  }
+  .anchors img {
+    width: 140px;
+    height: auto;
+  }
+
+  .card-fungo {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    transition: ease-in-out 0.5s;
+  }
+  #sinopse:hover .card-fungo {
+    display: block;
+  }
+
+  .card-fungo img {
+    height: 10em;
+  }
+
+  .card-fungo figcaption {
+    text-align: justify;
+    font-size: 0.8em;
+  }
+
+  /*--------tabela-------*/
+  .producao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+  .temporada {
+    display: table;
+    width: 300px;
+    font-size: 0.5rem;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-color: gray;
+  }
+
+  .temporada th {
+    align-items: center;
+    background-color: grey;
+    padding: 10px 0;
+  }
+  .temporada td {
+    background-color: lightgray;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    background-color: aliceblue;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    margin: 0 auto;
+    border-top: 0.1em solid #b6b6b6;
+  }
+  .text p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .footer-nav a {
+    display: block;
+    margin-right: 0;
+  }
 }
