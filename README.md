@@ -17,3 +17,22 @@ Sigam as intruções da chamada do vídeo. Acredito que por lá, ficará mais f�
 - [Wikipedia](https://pt.wikipedia.org/)
 
 
+## Meu Trabalho
+***
+Foi feito usando mobile first, segundo desafio da trilha Developer HTML.
+achei bem dificil mais consegui apresentar:
+
+* Estruturas semânticas
+
+* Estruturas de acessibilidade
+
+* Responsividade 
+
+## Ferramentas utilizadas
+---
+
+* WAVE
+* NVA
+
+
+

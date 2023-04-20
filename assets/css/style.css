@@ -36,6 +36,7 @@ Declarado First mobile
   p {
     text-align: justify;
     padding: 0 0.5em;
+    text-indent: 1.5em;
   }
   blockquote {
     border-left: 2px solid lightblue;
@@ -97,10 +98,17 @@ Declarado First mobile
     color: #AAAAAA;
   }
   .search-header input {
-    width: 100%;
-    border: 1.8px solid #AAAAAA;
-    border-radius: 2px;
+    border: 0.1em solid #b6b6b6;
+    border-radius: 0.2em;
+    height: 2em;
   }
+  .conta {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0; 
+  }
+  
   /* Navegador do conteudo
   -----------------------------------------------*/
   .bar span {
